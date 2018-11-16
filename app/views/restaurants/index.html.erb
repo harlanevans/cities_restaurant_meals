@@ -1,0 +1,7 @@
+<h1><%= @city.name %></h1>
+<%= link_to "Create a New Restaurant", new_city_restaurant_path %>
+<ul>
+  <% @restaurants.each do |t| %>
+    <li><%= link_to t.name, city_restaurant_path(@city, t) %></li>
+</ul><%= link_to "Back to Cities", cities_path %>
+<% end %>

@@ -1,0 +1,12 @@
+<h1><%= @restaurant.id ? "Edit Restaurant" : "New Restaurant" %></h1>
+<hr />
+<%= form_for [@city, @restaurant] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocuse: true, placeholder: "Name" %>
+  <br />
+  <%= f.label :type_of_food %>
+  <%= f.text_field :type_of_food, required: true, autofocuse: true, placeholder: "Food Type..." %>
+  <br />
+  <br />
+  <%= f.submit %>
+  <% end %>

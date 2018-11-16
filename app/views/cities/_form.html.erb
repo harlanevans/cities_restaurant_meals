@@ -1,0 +1,11 @@
+<h1><%= @city.id ? 'Edit City' : 'Create City' %></h1>
+<hr />
+<%= form_for @city do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+  <%= f.submit %>
+  <br />
+  <br />
+  <br />
+  <%= link_to "Back to Cities", cities_path %>
+<% end %>

@@ -1,0 +1,12 @@
+<h1><%= @city.name %></h1>
+<p>What Would You Like To Do?</p>
+<br />
+<%= link_to "Back to Cities", cities_path %>
+<br />
+<br />
+<%= link_to "See this Cities Restaurants", city_restaurants_path(@city) %>
+<br />
+<br />
+<%= link_to "Delete City", city_path(@city), method: :delete %>
+
+

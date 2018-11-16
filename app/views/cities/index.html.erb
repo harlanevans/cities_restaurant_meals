@@ -1,0 +1,22 @@
+<h1>City List</h1>
+<h2><%= link_to "New City", new_city_path %></h2>
+<% @cities.each do |city| %>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-sm">
+  <li><%= link_to city.name, city %></li>
+  
+  </div>
+  <div class="col-sm">
+  <%= link_to "Edit City", edit_city_path(city) %>
+  
+  </div>
+  <div class="col-sm">
+  <%= link_to "Delete City", @city, method: :destroy %>
+    
+    </div>
+  </div>
+</div>
+  <% end %>
+  
